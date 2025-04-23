@@ -8,7 +8,7 @@ body {
     overflow-x: hidden;
   }
 header {
-    background: #d7d7ef;
+    background: #1a73e8;
     padding: 2rem 0 .5rem 0;
     text-align: center;
     box-shadow: 0 2px 8px rgba(0,0,0,0.03);
@@ -22,12 +22,12 @@ header {
     display: flex;
     justify-content: center;
     gap: 2.5rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: 0.3rem;
     margin-top: -1.2rem;
   }
   .nav a {
     text-decoration: none;
-    color: #1a73e8;
+    color: white;
     font-weight: 500;
     font-size: 1.08rem;
     padding: 0.3rem 0.8rem;
@@ -210,33 +210,106 @@ header {
     padding: 0;
     margin: 0;
   }
-  .UIUX li {
-    font-size: 20px;
-    padding: 0;
-    margin: 0; 
-  }
-  .UIUX .beforeAfter{
-    display: flex; 
-    width: 100%; 
+  .strengthWeakness {
+    display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    gap: 0;
+    flex-wrap: nowrap;
+    margin-top: 1.5rem;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(30, 64, 175, 0.07);
+    border: 1px solid #e0e0e0;
+    background: #fafbfc;
   }
 
-  .UIUX .beforeAfter .item {
-    flex-direction:column;
-    display: flex; 
+  .strengthWeakness .strength,
+  .strengthWeakness .weakness {
+    flex: 1 1 50%;
+    padding: 18px 20px;
+    min-width: 200px;
+    background: #e8f5e9;
+    border-right: 1px solid #e0e0e0;
   }
-  .UIUX h3{
-    font-size: 20px;
+  
+  .strengthWeakness .weakness {
+    background: #ffebee;
+    border-right: none;
   }
-  .strengthWeakness {
-    width: 100%; 
-    display: flex; 
-    flex-direction: row;
-    border: 1px solid black; 
+  
+  .strengthWeakness .feedback {
+    display: none; /* Hide feedback if you only want strengths/weaknesses side by side */
   }
-  .strengthWeakness .item {
-    display: flex; 
-    flex-direction: column;
-    width: 50%; 
-  }
+
+.uiux-feature-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  margin: 10px 0 20px 0;
+}
+.uiux-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(30, 64, 175, 0.10);
+  overflow: hidden;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s, transform 0.2s;
+  border: 1px solid #868686;
+}
+.uiux-card:hover {
+  box-shadow: 0 8px 32px rgba(30, 64, 175, 0.18);
+  transform: translateY(-4px) scale(1.02);
+}
+.uiux-card-img {
+  height: 180px;
+  background-size: cover;
+  background-position: auto;
+  border-bottom: 1px solid #f0f0f0;
+}
+.uiux-card-content {
+  padding: 22px 20px 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.uiux-card-content h2 {
+  font-size: 1.35rem;
+  color: #1a73e8;
+  margin: 0 0 8px 0;
+  font-weight: 700;
+}
+.uiux-card-content p {
+  font-size: 1rem;
+  color: #222;
+  margin: 0 0 10px 0;
+}
+.uiux-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.tag {
+  font-size: 0.95rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 500;
+  background: #e3f0fd;
+  color: #174ea6;
+  border: none;
+}
+.tag-strength {
+  background: #e8f5e9;
+  color: #388e3c;
+}
+.tag-weakness {
+  background: #ffebee;
+  color: #c62828;
+}
+
+/* ...existing code... */
